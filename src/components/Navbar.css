@@ -1,67 +1,155 @@
 @media (prefers-reduced-motion: no-preference) {
-    .logo {
-      animation: App-logo-spin  infinite 3s linear;
-    }
+  .logo {
+    animation: App-logo-spin infinite 3s linear;
   }
+}
 
-  nav{
-    background-color: #bfbfbf;
-     box-shadow: 3px 3px 7px rgb(131, 131, 131);
-    transition: all ease 0.4s;
-  }
-  #btn-close{
-    color: aliceblue;
-    background-color: aliceblue;
-  }
-  nav:hover{
-    background-color: #bfbfbf;
-    box-shadow: 3px 3px 15px rgb(94, 94, 94) ,  3px 3px 22px rgb(84, 84, 84);
-  }
-  .offcanvas{
-    background-color: #e9e9e9;
-    box-shadow: 2px 2px 25px rgb(44, 44, 44),2px 2px 25px black;
-  }
-  
-  #title {
-    background: linear-gradient(to right, #0074D9, #00BFFF, #00eeff); /* Blue gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 33px;
-    font-weight: bold;
-    filter: drop-shadow(1px 1px 1px black);
-    animation: colorWave 5s linear infinite; /* Adjust duration as needed */
-  }
-  
-  
-  #title2{
-    background: linear-gradient(to left, #0074D9, #00BFFF,  #00eeff); /* Blue gradient */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 24px; 
-    font-weight: bold;
-    font-size: 30px;
-    filter: drop-shadow(1px 1px 1px black);
-    animation: color 12s ease-in-out infinite;
-  }
-  
+nav {
+  background-color: #bfbfbf;
+  box-shadow: 3px 3px 7px rgb(131, 131, 131);
+  transition: all ease 0.4s;
+}
+
+nav:hover {
+  background-color: #bfbfbf;
+  box-shadow: 3px 3px 15px rgb(94, 94, 94), 3px 3px 22px rgb(84, 84, 84);
+}
+
+
+#title {
+  background: linear-gradient(to right, #0074D9, #00BFFF, #00eeff);
+  /* Blue gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 33px;
+  font-weight: bold;
+  filter: drop-shadow(1px 1px 1px black);
+  animation: colorWave 5s linear infinite;
+  /* Adjust duration as needed */
+}
+
+
+#title2 {
+  background: linear-gradient(to left, #0074D9, #00BFFF, #00eeff);
+  /* Blue gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  font-weight: bold;
+  font-size: 30px;
+  filter: drop-shadow(1px 1px 1px black);
+  animation: color 12s ease-in-out infinite;
+}
+
 @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
 
-  @keyframes rotateCube {
-    from {
-      transform: rotateY(0deg);
-    }
-    to {
-      transform: rotateY(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateY(0deg);
   }
 
+  to {
+    transform: rotateY(360deg);
+  }
+}
 
+#header {
+  background-color: black;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 50px;
+  width: 98%;
+  margin-left: 1%;
+  border-top: 3px solid rgba(214, 214, 214, 0.697);
+  transition: all ease 0.3s;
+}
+
+#header:hover{
+  border-bottom: 3px solid rgba(255, 255, 255, 0.766);
+  border-top: none;
+  transform: scale(1.01);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#checkbox {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  font-size: 30px;
+  background-color: rgb(99, 99, 99);
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: rgb(37, 37, 37);
+  border: 2px solid rgb(126, 126, 126);
+  box-shadow: 0px 0px 3px rgb(2, 2, 2) inset;
+}
+
+.svg {
+  position: relative;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg path {
+  fill: rgb(37, 37, 37);
+}
+
+#checkbox:checked + .switch .svg {
+  filter: drop-shadow(0px 0px 3px rgb(0, 255, 255));
+}
+
+#checkbox:checked + .switch .svg path {
+  fill: rgb(102, 255, 255);
+}
+
+#checkbox:checked + .switch {
+  box-shadow: 0px 0px 1px rgb(0, 255, 255) inset,
+      0px 0px 2px rgb(0, 255, 255) inset,
+      0px 0px 10px rgb(0, 255, 255) inset,
+      0px 0px 40px rgb(0, 255, 255),
+      0px 0px 100px rgb(0, 255, 255),
+      0px 0px 5px rgb(0, 255, 255);
+  border: 2px solid rgba(255, 255, 255, 0.807);
+  background-color: rgb(107, 163, 172);
+  color: rgb(255, 255, 255);
+}
+  

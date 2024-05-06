@@ -2,8 +2,7 @@
 import React from 'react'
 import './Loader.css'
 
-export class Loaders extends React.Component {
-    render() {
+ const Loaders =()=> {
         return (
             <div>
                 <center>
@@ -24,4 +23,5 @@ export class Loaders extends React.Component {
             </div>
         )
     }
-}
+
+    export default Loaders

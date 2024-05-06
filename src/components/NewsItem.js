@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import './NewsItem.css';
 
-export class NewsItem extends Component {
+const NewsItem =(props)=> {
 
-    render() {
-        let { title, description, imageUrl, newsUrl, author, date } = this.props;
+        let { title, description, imageUrl, newsUrl, author, date } = props;
 
         const currentDate = new Date();
         currentDate.setDate(currentDate.getDate() - 1); 
@@ -18,7 +17,7 @@ export class NewsItem extends Component {
 
         return (
             <div className='my-3'>
-                <div className="card" style={{ color: this.props.mode === 'light' ? 'black' : 'white', backgroundColor: this.props.mode === 'dark' ? 'black' : 'white' }}>
+                <div className="card" style={{ color: props.mode === 'light' ? 'black' : 'white', backgroundColor: props.mode === 'dark' ? 'black' : 'white' }}>
                     {isNewArticle && (
                         <span className="position-absolute top-0 translate-middle badge rounded-pill bg-danger" style={{ left: "100%" }}>
                             New
@@ -31,15 +30,11 @@ export class NewsItem extends Component {
                         <p className="card-text des">{!description ? "This News Has No Description To Show Here. Click on 'Read More' for details." : description}</p>
                         <p className="card-text"><small className="">By {!author ? "Unknown" : author}</small> <br />
                         <small className=""> On {new Date(date).toGMTString()}</small></p>
-                        <a href={newsUrl} className={`btn read btn-sm`} style={{ color: this.props.mode === 'light' ? 'black' : 'white' }} target='_blank' rel="noopener noreferrer">Read More</a>
+                        <a href={newsUrl} className={`btn read btn-sm`} style={{ color: props.mode === 'light' ? 'black' : 'white' }} target='_blank' rel="noopener noreferrer">Read More</a>
                     </div>
                 </div>
             </div>
         );
     }
-
-
-}
-
 
 export default NewsItem
